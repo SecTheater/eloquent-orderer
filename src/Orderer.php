@@ -1,6 +1,6 @@
 <?php
 
-namespace Eloquent\Orderer\Ordering;
+namespace Eloquent\Orderer;
 
 use Illuminate\Database\Eloquent\Model;
 
