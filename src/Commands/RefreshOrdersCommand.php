@@ -31,7 +31,7 @@ class RefreshOrdersCommand extends Command
         $reflectionModel = new ReflectionClass($this->argument('model'));
         if (in_array("Eloquent\Orderer\Orderable", array_keys($reflectionModel->getTraits()))) {
             $model = app($this->argument('model'));
-            $model->refresh();
+            $model->orderer()->refresh();
             $this->info(sprintf('Fixing up %s orders', class_basename($model)));
         }
         $this->info('Finished up refreshing the orders');
